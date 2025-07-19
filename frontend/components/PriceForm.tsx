@@ -31,7 +31,7 @@ export default function PriceForm() {
       }
 
       const res = await fetch(
-        `http://localhost:4000/api/price/${token}/${network}/${timestamp}`
+        `https://token-price-app.onrender.com/api/price/${token}/${network}/${timestamp}`
       );
       const data = await res.json();
       setPriceResult(data);
