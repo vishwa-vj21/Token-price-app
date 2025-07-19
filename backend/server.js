@@ -11,6 +11,7 @@ import "./jobs/fetchPrices.js";
 
 // console.log("UPSTASH_REDIS_URL =", process.env.UPSTASH_REDIS_URL);
 // console.log("ALCHEMY_API_KEY:", process.env.ALCHEMY_API_KEY);
+// console.log
 
 const app = express();
 const PORT = 4000;
@@ -18,7 +19,7 @@ const PORT = 4000;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect("mongodb://127.0.0.1:27017/token_prices", {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
